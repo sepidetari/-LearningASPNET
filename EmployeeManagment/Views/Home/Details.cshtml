@@ -1,0 +1,25 @@
+﻿<h3>@ViewData ["PageTitle"]</h3>
+
+@{
+    @* we insert this in viewStart file in order to prevent code repeating
+        Layout = "~/Views/shared/_Layout.cshtml";*@
+    ViewBag.Title = "Employee Dettails";
+}
+
+@*ViewData["Employee"] is type string so we nned to epxlicitely cast it to EmployeeManagment.Models.Employee *@
+@{
+    var employee = ViewData["Employee"] as EmployeeManagment.Models.Employee;
+
+}
+
+<div>
+    Name: @employee.Name
+</div>
+
+<div>
+    Email: @employee.Email
+</div>
+
+<div>
+    Department: @employee.Department
+</div>

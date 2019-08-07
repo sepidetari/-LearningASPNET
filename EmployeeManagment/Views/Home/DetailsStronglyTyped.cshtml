@@ -1,0 +1,25 @@
+﻿@model EmployeeManagment.Models.Employee
+
+@{
+    @* we insert this in viewStart file in order to prevent code repeating
+        Layout = "~/Views/shared/_Layout.cshtml";*@ 
+    ViewBag.Title = "Employee Details";
+}
+
+<h3>@ViewBag.PageTitle</h3>
+
+<div>
+    Name: @Model.Name
+</div>
+
+<div>
+    Email: @Model.Email
+</div>
+
+<div>
+    Department: @Model.Department
+</div>
+
+@section Scripts {
+    <script src="~/js/CustomScript.js"></script>
+}
